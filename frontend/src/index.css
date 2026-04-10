@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800&display=swap');
+
+@layer base {
+  body {
+    @apply bg-space-900 text-gray-100 font-sans antialiased min-h-screen overflow-x-hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-space-800/60 backdrop-blur-xl border border-space-border shadow-2xl rounded-2xl;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: theme('colors.space.700');
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.space.border');
+}
